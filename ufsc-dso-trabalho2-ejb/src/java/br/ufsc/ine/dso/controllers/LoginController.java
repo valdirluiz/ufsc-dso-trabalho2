@@ -5,8 +5,8 @@
  */
 package br.ufsc.ine.dso.controllers;
 
+import br.ufsc.ine.dso.models.Cliente;
 import javax.ejb.Stateless;
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -20,8 +20,8 @@ public class LoginController {
     @PersistenceContext
     EntityManager em;
     
-    public Boolean logar(){
-        return true;
+    public Boolean logar(Cliente cliente){
+        return em.createNamedQuery(Cl);
     }
             
     

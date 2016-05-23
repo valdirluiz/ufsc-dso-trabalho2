@@ -9,11 +9,16 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class LoginBean {
     
-    private Cliente cliente;
+    private Cliente clienteLogado;
     @EJB
     private LoginController loginController;
     
     
-    
+    public String logar(){
+        if(true){
+            return "home";
+        }
+        return "index";
+    }
     
 }
