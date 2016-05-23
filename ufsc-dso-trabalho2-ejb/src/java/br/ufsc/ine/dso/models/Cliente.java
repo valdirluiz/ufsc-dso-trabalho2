@@ -6,11 +6,15 @@ package br.ufsc.ine.dso.models;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 
 /**
  *
  * @author Valdir Luiz
  */
+
 public class Cliente {
     
     private Long id;
@@ -23,6 +27,10 @@ public class Cliente {
     private Long quantidadePontos;
     private Date dataCadastro;
     private Date dataUltimoLogin;
+    
+    
+    
+    @OneToMany(mappedBy = "cliente")
     private List<Troca> trocas = new ArrayList<>();
 
     public Long getId() {

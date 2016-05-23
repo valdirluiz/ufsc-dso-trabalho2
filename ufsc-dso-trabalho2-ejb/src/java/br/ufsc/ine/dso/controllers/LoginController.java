@@ -5,28 +5,24 @@
  */
 package br.ufsc.ine.dso.controllers;
 
-import br.ufsc.ine.dso.models.Produto;
-import javax.ejb.Singleton;
+import javax.ejb.Stateless;
+import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
  *
- * @author Valdir Luiz
+ * @author mmiola
  */
-@Singleton
-public class ProdutoController{
+@Stateless
+public class LoginController {
     
     @PersistenceContext
-    private EntityManager em;
+    EntityManager em;
     
-    public void save(Produto produto){
-        this.em.persist(produto);
+    public Boolean logar(){
+        return true;
     }
-    
-    public void update(Produto produto){
-        this.em.merge(produto);
-    }
- 
+            
     
 }

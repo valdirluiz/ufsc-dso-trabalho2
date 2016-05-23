@@ -1,17 +1,29 @@
 package br.ufsc.ine.dso.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
 /**
  *
  * @author Valdir Luiz
  */
+
+@Table(name = "PRODUTOS")
+@Entity
 public class Produto {
     
+    @Id
+    @Column(name="ID")
     private Long id;
     private String marca;
     private String nome;
     private String descricao;
     private Integer quantidadeDisponivel;
     private Long custoEmPontos;
+    
 
     public Long getId() {
         return id;

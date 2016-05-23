@@ -1,6 +1,10 @@
 package br.ufsc.ine.dso.models;
 
 import java.util.Date;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -9,6 +13,10 @@ import java.util.Date;
 public class Troca {
     
     private Integer id;
+    
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="ID_CLIENTE")
+    
     private Cliente cliente;
     private Produto produto;
     private Date dataTroca;
