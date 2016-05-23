@@ -13,6 +13,6 @@ import javax.ejb.Stateless;
  * @author Valdir Luiz
  */
 @Stateless
-public class ProdutoController extends AbstractController<Produto> {
+public class ProdutoController{
     
 }

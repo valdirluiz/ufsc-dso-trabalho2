@@ -13,6 +13,6 @@ import javax.ejb.Stateless;
  * @author Valdir Luiz
  */
 @Stateless
-public class TrocasController extends AbstractController<Troca>{
+public class TrocasController {
     
 }

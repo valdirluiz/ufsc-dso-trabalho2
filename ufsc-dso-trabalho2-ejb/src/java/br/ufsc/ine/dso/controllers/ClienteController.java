@@ -14,6 +14,6 @@ import javax.ejb.Stateless;
  */
 
 @Stateless
-public class ClienteController extends AbstractController<Cliente>{
+public class ClienteController{
     
 }
